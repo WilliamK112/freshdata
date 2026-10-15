@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, and how to reproduce them locally.">
+        <meta name="description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, the reproducible nine-metric harness, and how to run them locally.">
       
       
         <meta name="author" content="Johnny Wilson Dougherty">
@@ -15,17 +15,17 @@
         <link rel="canonical" href="https://freshcode-org.github.io/freshdata/benchmarks/">
       
       
-        <link rel="prev" href="../examples/">
+        <link rel="prev" href="../production-readiness/">
       
       
-        <link rel="next" href="../api-reference/">
+        <link rel="next" href="../performance-investigation/">
       
       
         
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -67,7 +67,7 @@
   
   
 
-  <meta name="description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, and how to reproduce them locally.">
+  <meta name="description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, the reproducible nine-metric harness, and how to run them locally.">
   
   <meta name="keywords" content="data cleaning performance, pandas cleaning speed, freshdata benchmarks">
   
@@ -75,14 +75,14 @@
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Benchmarks - freshdata">
-  <meta property="og:description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, and how to reproduce them locally.">
+  <meta property="og:description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, the reproducible nine-metric harness, and how to run them locally.">
   <meta property="og:url" content="https://freshcode-org.github.io/freshdata/benchmarks/">
   <meta property="og:site_name" content="freshdata">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Benchmarks - freshdata">
-  <meta name="twitter:description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, and how to reproduce them locally.">
+  <meta name="twitter:description" content="freshdata performance benchmarks — throughput on real and synthetic datasets, the reproducible nine-metric harness, and how to run them locally.">
 
   <link rel="canonical" href="https://freshcode-org.github.io/freshdata/benchmarks/">
 
@@ -361,6 +361,121 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/freshdata-1-0-launch/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../limitations/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Honest limitations
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../comparison/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Comparison (pandas / PyJanitor / GX / OpenRefine)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../trust-claims/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trust claims — evidence map
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../threat-model/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Threat model
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../production-readiness/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Production-readiness checklist
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -372,6 +487,63 @@
     
   
   Benchmarks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../performance-investigation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Performance investigation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../validation-gauntlet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Validation Gauntlet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../fixtures/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Benchmark fixtures
 
       </a>
     </li>
@@ -421,17 +593,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../contributing/" class="md-tabs__link">
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cookbook/" class="md-tabs__link">
+          
+  
+  
+  Cookbook
+
+        </a>
+      </li>
+    
+  
+
+      
         
   
   
+  
+  
     
+    
+      <li class="md-tabs__item">
+        <a href="../contributing/first-contribution/" class="md-tabs__link">
+          
+  
   
   Contributing
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -648,6 +841,230 @@
   
   
     <li class="md-nav__item">
+      <a href="../audit-trail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit-trail JSON and schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation (suites & contracts)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Peel output system
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decision-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision-preserving workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scalable backends
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fallback-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend fallback matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../freshcore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FreshCore architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../data-profiling/" class="md-nav__link">
         
   
@@ -697,6 +1114,398 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Streaming / micro-batch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-cleaning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantic cleaning layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context-policies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context policies (rules in English)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Copilot (experimental)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repair-plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repair plans (suggest/review/apply)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional semantic models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-cards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model cards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-training-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer training pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Format parsers & tick mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text cleaning & field validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orchestration integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -719,6 +1528,228 @@
     
   
     Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/freshdata-1-0-launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    freshdata 1.0 launch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Honest limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison (pandas / PyJanitor / GX / OpenRefine)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trust-claims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trust claims — evidence map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threat model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production-readiness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Production-readiness checklist
   
 
     
@@ -798,6 +1829,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#performance-and-scalability-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance and scalability investigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#typical-throughput" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -809,10 +1851,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reproduce-locally" class="md-nav__link">
+  <a href="#the-benchmark-release-harness" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reproduce locally
+        The Benchmark Release harness
       
     </span>
   </a>
@@ -820,10 +1862,115 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validated-scenarios" class="md-nav__link">
+  <a href="#calibration-metrics-cleanbench-phase-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validated scenarios
+        Calibration metrics (CleanBench Phase 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategic-report-scaling-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic-report scaling benchmarks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategic-report scaling benchmarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-the-public-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refreshing the public numbers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-not-yet-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results — not yet measured
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-each-metric-measures-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each metric measures (and why)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-results-10k-row-scale-balanced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current results — 10k-row scale, balanced mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-resolution-accuracy-labelled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity-resolution accuracy (labelled)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competitor-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor differentiation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-fixture-or-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a fixture or baseline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproduce-the-legacy-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproduce the legacy corpus
       
     </span>
   </a>
@@ -834,6 +1981,87 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance-investigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance investigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation-gauntlet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation Gauntlet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmark fixtures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -898,9 +2126,336 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookbook
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cookbook
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/clean-pandas-dataframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean pandas DataFrame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/safely-handle-missing-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Safely handle missing values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/imputation-strategies-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imputation strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/detect-and-resolve-duplicates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Detect & resolve duplicates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/prepare-data-for-machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prepare data for ML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/clean-polars-dataframes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Polars DataFrames
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/data-cleaning-in-etl-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data cleaning in ETL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/audit-automated-data-cleaning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit automated cleaning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -914,7 +2469,219 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/first-contribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First contribution guide
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/first-pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First PR guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/contributor-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributor roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../growth/metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Growth & traction metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/comparison-refresh-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison refresh checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/labels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project labels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -946,6 +2713,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#performance-and-scalability-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance and scalability investigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#typical-throughput" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -957,10 +2735,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reproduce-locally" class="md-nav__link">
+  <a href="#the-benchmark-release-harness" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reproduce locally
+        The Benchmark Release harness
       
     </span>
   </a>
@@ -968,10 +2746,115 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validated-scenarios" class="md-nav__link">
+  <a href="#calibration-metrics-cleanbench-phase-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validated scenarios
+        Calibration metrics (CleanBench Phase 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategic-report-scaling-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic-report scaling benchmarks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategic-report scaling benchmarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-the-public-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refreshing the public numbers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-not-yet-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results — not yet measured
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-each-metric-measures-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each metric measures (and why)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-results-10k-row-scale-balanced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current results — 10k-row scale, balanced mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-resolution-accuracy-labelled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity-resolution accuracy (labelled)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competitor-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor differentiation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-fixture-or-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a fixture or baseline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproduce-the-legacy-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproduce the legacy corpus
       
     </span>
   </a>
@@ -1001,6 +2884,22 @@
 <h1 id="benchmarks">Benchmarks<a class="headerlink" href="#benchmarks" title="Permanent link">&para;</a></h1>
 <p><code>freshdata</code> is built on vectorized pandas/NumPy with one-pass engine caching
 (correlation matrix, column contexts). No C extension is required.</p>
+<h2 id="performance-and-scalability-investigation">Performance and scalability investigation<a class="headerlink" href="#performance-and-scalability-investigation" title="Permanent link">&para;</a></h2>
+<p>The <a href="../performance-investigation/">performance investigation</a> documents the
+deterministic mixed-schema harness, isolated subprocess execution, versioned JSON
+evidence, profiling, and variability-aware comparison methodology. Baseline
+measurement is in progress, so the investigation does not yet claim a slowdown or
+improvement.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev,bench,ml]"</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>make<span class="w"> </span>performance-ci
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>make<span class="w"> </span>performance-baseline
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>make<span class="w"> </span>performance-profile
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>make<span class="w"> </span>performance-report
+</span></code></pre></div>
+<p>Raw cases are written under <code>benchmarks/results/performance/</code> and remain ignored.
+Compact <code>*-summary.json</code> and <code>*-report.md</code> evidence may be committed after it is
+validated. The weekly/manual GitHub Actions workflow runs the large matrix and
+uploads the full result directory, including failed, timed-out, or exhausted cases.</p>
 <h2 id="typical-throughput">Typical throughput<a class="headerlink" href="#typical-throughput" title="Permanent link">&para;</a></h2>
 <p>Measured on a modern laptop (see <code>tests/fixtures/perf/baselines.json</code>):</p>
 <table>
@@ -1031,23 +2930,755 @@
 </table>
 <p>The aggressive bottleneck is KNN imputation on large frames, which is why KNN is
 gated to aggressive mode only.</p>
-<h2 id="reproduce-locally">Reproduce locally<a class="headerlink" href="#reproduce-locally" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>--fixtures<span class="w"> </span>--compare<span class="w">   </span><span class="c1"># all local fixtures, side by side</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>--online<span class="w"> </span>--compare<span class="w">     </span><span class="c1"># cached online datasets</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w">                         </span><span class="c1"># synthetic data</span>
+<p>MissForest-style imputation is also benchmarked separately because it is
+opt-in, scikit-learn-backed, and intentionally slower than the default engine.
+Use <code>python benchmarks/bench_missforest.py</code> after installing
+<code>freshdata-cleaner[ml]</code> to compare median/mode, aggressive KNN, and MissForest
+on mixed-type synthetic data.</p>
+<h2 id="the-benchmark-release-harness">The Benchmark Release harness<a class="headerlink" href="#the-benchmark-release-harness" title="Permanent link">&para;</a></h2>
+<p><code>benchmarks/bench.py</code> is a reproducible, schema-stable harness that measures
+<strong>nine standardized metrics</strong> against an enterprise fixture library, with pandas
+and pyjanitor baselines. It calls FreshData exactly as a user would; it never
+modifies library internals.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span><span class="w"> </span>jsonschema
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>fixtures<span class="w">     </span><span class="c1"># (optional) write fixture CSVs to disk</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>run<span class="w">          </span><span class="c1"># all fixtures, 10k rows, write results/&lt;run_id&gt;/</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>report<span class="w">       </span><span class="c1"># render report.md + report.json for the latest run</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>compare<span class="w"> </span>--fixture<span class="w"> </span>crm<span class="w"> </span>--size<span class="w"> </span><span class="m">100000</span><span class="w">   </span><span class="c1"># FreshData vs baselines</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>python<span class="w"> </span>benchmarks/bench.py<span class="w"> </span>single<span class="w"> </span>--fixture<span class="w"> </span>crm<span class="w"> </span>--size<span class="w"> </span><span class="m">100000</span><span class="w"> </span>--metric<span class="w"> </span><span class="nb">time</span>
 </span></code></pre></div>
-<p>Optional large-file benchmark (29k-row AQI.csv, not committed):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">FRESHDATA_AQI_PATH</span><span class="o">=</span>/path/to/AQI.csv
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pytest<span class="w"> </span>-m<span class="w"> </span>large
+<p>Makefile shortcuts: <code>make benchmark</code>, <code>make benchmark-ci</code>, <code>make benchmark-report</code>,
+<code>make benchmark-fixtures</code>, <code>make benchmark-test</code>. Results land in
+<code>results/&lt;run_id&gt;/&lt;fixture&gt;/&lt;size&gt;.json</code> in the schema in
+<code>benchmarks/results_schema.py</code>, so runs diff cleanly across versions.</p>
+<blockquote>
+<p>The legacy quick-bench (<code>python benchmarks/bench_quick.py --fixtures --compare</code>)
+is preserved for ad-hoc throughput checks on the <code>tests/fixtures/</code> corpus.</p>
+</blockquote>
+<h2 id="calibration-metrics-cleanbench-phase-3">Calibration metrics (CleanBench Phase 3)<a class="headerlink" href="#calibration-metrics-cleanbench-phase-3" title="Permanent link">&para;</a></h2>
+<p>The CleanBench mini-suite (<code>benchmarks/cleanbench/</code>, run in CI by
+<code>tests/test_cleanbench.py</code>) gates the semantic layer's <em>confidence honesty</em>
+alongside the Phase-2 safety gates:</p>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>definition</th>
+<th>Phase-3 gate</th>
+<th>long-run target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protected-column violation rate</td>
+<td>any diff in protected columns</td>
+<td><strong>= 0, absolute</strong></td>
+<td>= 0</td>
+</tr>
+<tr>
+<td>false modification rate</td>
+<td>already-correct cells changed anyway</td>
+<td>≤ 0.1%</td>
+<td>trend to 0</td>
+</tr>
+<tr>
+<td>expected calibration error (ECE)</td>
+<td>equal-width-bin gap between confidence and accuracy over semantic proposals</td>
+<td>≤ 0.05</td>
+<td>≤ 0.03</td>
+</tr>
+<tr>
+<td>precision @ confidence ≥ 0.95</td>
+<td>share of high-confidence proposals that match ground truth</td>
+<td>≥ 0.98</td>
+<td>≥ 0.99</td>
+</tr>
+<tr>
+<td>coverage @ precision 0.98</td>
+<td>largest share of proposals acceptable at that precision (abstention quality)</td>
+<td>reported</td>
+<td>grows per phase</td>
+</tr>
+<tr>
+<td>ambiguous auto-applies</td>
+<td>embedding merges applied without margin/allowed-values evidence</td>
+<td><strong>= 0</strong></td>
+<td>= 0</td>
+</tr>
+</tbody>
+</table>
+<p>Pairs are extracted with <code>cleanbench.confidence_outcomes(report, truth,
+corrupted)</code> — every semantic proposal's calibrated confidence against whether
+its repair matches the fixture's ground truth. The Phase-3 fixture runs the
+full embedding path with a deterministic stub encoder, so the gates hold with
+no model files and no network.</p>
+<h2 id="strategic-report-scaling-benchmarks">Strategic-report scaling benchmarks<a class="headerlink" href="#strategic-report-scaling-benchmarks" title="Permanent link">&para;</a></h2>
+<p><code>benchmarks/bench_report.py</code> covers five reproducible scaling cases, each
+measured for <code>strategy="balanced"</code> vs <code>strategy="aggressive"</code> where applicable.
+It generates its own synthetic fixtures and writes
+<code>benchmarks/results/report_bench.json</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[bench]"</span><span class="w">          </span><span class="c1"># pyarrow + psutil</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>benchmarks/bench_report.py<span class="w"> </span>--all<span class="w">                 </span><span class="c1"># everything</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>python<span class="w"> </span>benchmarks/bench_report.py<span class="w"> </span>csv_ingest<span class="w"> </span>--mb<span class="w"> </span><span class="m">100</span><span class="w">   </span><span class="c1"># ~100 MB CSV ingest + clean</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>python<span class="w"> </span>benchmarks/bench_report.py<span class="w"> </span>profile<span class="w"> </span>--rows<span class="w"> </span><span class="m">1000000</span><span class="w">     </span><span class="c1"># 1M-row mixed-schema profile</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python<span class="w"> </span>benchmarks/bench_report.py<span class="w"> </span>nullfill<span class="w"> </span>--rows<span class="w"> </span><span class="m">10000000</span><span class="w">   </span><span class="c1"># 10M-row null-fill / flag pass</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>python<span class="w"> </span>benchmarks/bench_report.py<span class="w"> </span>import_time<span class="w">           </span><span class="c1"># cold `import freshdata`</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>python<span class="w"> </span>benchmarks/bench_report.py<span class="w"> </span>memory<span class="w"> </span>--rows<span class="w"> </span><span class="m">1000000</span><span class="w">      </span><span class="c1"># peak-RSS of a full clean</span>
 </span></code></pre></div>
-<h2 id="validated-scenarios">Validated scenarios<a class="headerlink" href="#validated-scenarios" title="Permanent link">&para;</a></h2>
+<h4 id="refreshing-the-public-numbers">Refreshing the public numbers<a class="headerlink" href="#refreshing-the-public-numbers" title="Permanent link">&para;</a></h4>
+<p><code>benchmarks/public_benchmark.py</code> runs these scaling cases together with the
+per-fixture harness (<code>bench.py</code>) and writes one shareable report,
+<code>benchmarks/results/public/public-benchmark.md</code> (+ <code>.json</code>), stamped with the
+freshdata version, commit, hardware and package versions:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>benchmarks/public_benchmark.py<span class="w">                </span><span class="c1"># CI-safe sizes (1M rows, 50 MB CSV)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>benchmarks/public_benchmark.py<span class="w"> </span>--scale<span class="w"> </span>full<span class="w">   </span><span class="c1"># the full sizes listed above</span>
+</span></code></pre></div>
+<p>To produce it on a GitHub-hosted runner, dispatch the manual <strong>Public benchmark</strong>
+workflow (<code>gh workflow run public-benchmark.yml</code>); the report is attached as the
+<code>public-benchmark-&lt;run id&gt;</code> artifact and shown in the run summary. It never runs
+on pushes or pull requests.</p>
+<h3 id="results-not-yet-measured">Results — not yet measured<a class="headerlink" href="#results-not-yet-measured" title="Permanent link">&para;</a></h3>
+<p>These numbers are <strong>environment-specific and are not committed</strong>. Run the
+commands above and read <code>benchmarks/results/report_bench.json</code>. Fill the table
+in with the hardware/software you actually ran on; do not copy numbers from
+elsewhere.</p>
+<ul>
+<li><strong>Hardware:</strong> <em>(CPU, cores, RAM — fill in)</em></li>
+<li><strong>Software:</strong> <em>(OS, Python version, pandas/pyarrow/polars/duckdb versions — fill in)</em></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>Balanced</th>
+<th>Aggressive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100 MB CSV ingest + clean</td>
+<td><em>not yet measured</em></td>
+<td><em>not yet measured</em></td>
+</tr>
+<tr>
+<td>1M-row profile</td>
+<td><em>not yet measured</em></td>
+<td><em>n/a (read-only)</em></td>
+</tr>
+<tr>
+<td>10M-row null-fill / flag</td>
+<td><em>not yet measured</em></td>
+<td><em>not yet measured</em></td>
+</tr>
+<tr>
+<td>Import time (<code>import freshdata</code>)</td>
+<td><em>not yet measured</em></td>
+<td><em>n/a</em></td>
+</tr>
+<tr>
+<td>Peak memory @ 1M rows</td>
+<td><em>not yet measured</em></td>
+<td><em>not yet measured</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-each-metric-measures-and-why">What each metric measures (and why)<a class="headerlink" href="#what-each-metric-measures-and-why" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Wall-clock</strong></td>
+<td>p50/p95 seconds for <code>fd.clean(df, return_report=True)</code> over 5 repeats, I/O excluded.</td>
+<td>Raw throughput on real-shaped data.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Peak memory (MB)</strong></td>
+<td>Peak/delta <code>tracemalloc</code> allocation during the run.</td>
+<td>Footprint, esp. the wide-schema report-generation stress case.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Repair fidelity (%)</strong></td>
+<td>Cell-level match to the gold oracle; family-level post-conditions (<code>DEFECT_MANIFEST</code>) for named fixtures.</td>
+<td>Does FreshData actually fix what it claims to?</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>False-repair rate (%)</strong></td>
+<td>% of cells that must <strong>not</strong> change (id/target/free-text traps) that changed anyway.</td>
+<td>The core safety contract. Must be <strong>0</strong>.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Preservation rate (%)</strong></td>
+<td>% of protected values identical before/after.</td>
+<td>The id/target/text invariant under load. Must be <strong>100</strong> on non-null ids.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Authored-code reduction</strong></td>
+<td>FreshData call lines vs the pandas/pyjanitor baseline lines for the same defect set.</td>
+<td>Expressiveness (reported separately from timing).</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Diagnosis speed</strong></td>
+<td>Latency of <code>report.summary()</code> / <code>.to_frame()</code> / <code>.to_dict()</code> (+ enterprise <code>quality.to_markdown()</code> / <code>lineage.emit()</code>).</td>
+<td>Time from report to explanation.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Trust-score usefulness</strong></td>
+<td>Strict monotonic decrease of the 0–100 trust score as defect rate rises (0→60%).</td>
+<td>The trust score must be a meaningful signal.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Export completeness</strong></td>
+<td>All report fields populated; every repaired action carries before/after, risk, confidence (rationale for engine decisions).</td>
+<td>A repair you cannot explain or export is not auditable.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="current-results-10k-row-scale-balanced-mode">Current results — 10k-row scale, balanced mode<a class="headerlink" href="#current-results-10k-row-scale-balanced-mode" title="Permanent link">&para;</a></h3>
+<p>Refreshed by the CI benchmark workflow; values below are a reference local run
+(freshdata 1.0.0). Re-render with <code>bench.py run &amp;&amp; bench.py report</code>.</p>
+<table>
+<thead>
+<tr>
+<th>fixture</th>
+<th style="text-align: right;">n_rows</th>
+<th style="text-align: right;">n_cols</th>
+<th style="text-align: right;">p50 s</th>
+<th style="text-align: right;">p95 s</th>
+<th style="text-align: right;">peak MB</th>
+<th style="text-align: right;">repair %</th>
+<th style="text-align: right;">false-repair %</th>
+<th style="text-align: right;">preserve %</th>
+<th style="text-align: right;">trust</th>
+<th style="text-align: center;">monotonic</th>
+<th style="text-align: right;">export %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>crm</td>
+<td style="text-align: right;">10,200</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.93</td>
+<td style="text-align: right;">0.93</td>
+<td style="text-align: right;">8.2</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">93.8</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr>
+<td>finance</td>
+<td style="text-align: right;">10,200</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">99.5</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr>
+<td>event_log</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">99.7</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr>
+<td>wide_schema</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">2.28</td>
+<td style="text-align: right;">2.29</td>
+<td style="text-align: right;">14.6</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr>
+<td>provenance</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">99.8</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr>
+<td>gold</td>
+<td style="text-align: right;">10,200</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">2.7</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">98.3</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authored-code reduction (Metric 6):</strong> FreshData = 3 lines; pandas baseline = 26
+lines (<strong>88.5%</strong> reduction); pyjanitor baseline = 20 lines (<strong>85.0%</strong> reduction).</p>
+<p>The false-repair rate is <strong>0.0%</strong> and preservation <strong>100.0%</strong> on every fixture —
+the id/target/free-text invariant holds under load, not just on toy examples.</p>
+<h2 id="entity-resolution-accuracy-labelled">Entity-resolution accuracy (labelled)<a class="headerlink" href="#entity-resolution-accuracy-labelled" title="Permanent link">&para;</a></h2>
+<p>Measured on the committed labelled dataset
+<code>benchmarks/data/er_labelled_5k.csv</code> (5,000 rows; generator:
+<code>benchmarks/gen_er_labelled.py --rows 5000 --seed 7</code> — typos, reordered names,
+abbreviations, blanked fields, transliteration, shared households, deliberate
+near-collisions). Method: <strong>rule-weighted linkage</strong> (normalized weighted
+average — no EM/Fellegi–Sunter, no Splink-parity claim). Raw output:
+<code>benchmarks/er_results.json</code>. Reproduce:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="go">python benchmarks/bench_entity_resolution.py \</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="go">    --labelled benchmarks/data/er_labelled_5k.csv --json</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th style="text-align: right;">Precision</th>
+<th style="text-align: right;">Recall</th>
+<th style="text-align: right;">F1</th>
+<th style="text-align: right;">FP</th>
+<th style="text-align: right;">FN</th>
+<th style="text-align: right;">False-merged clusters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pandas exact <code>drop_duplicates</code> (baseline)</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">0.054</td>
+<td style="text-align: right;">0.103</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2,539</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>null_policy=penalize, mode=balanced</code></td>
+<td style="text-align: right;">0.999</td>
+<td style="text-align: right;">0.300</td>
+<td style="text-align: right;">0.462</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,878</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>null_policy=neutral, mode=balanced</code></td>
+<td style="text-align: right;">0.994</td>
+<td style="text-align: right;">0.456</td>
+<td style="text-align: right;">0.626</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1,459</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td><code>null_policy=neutral, mode=precision</code></td>
+<td style="text-align: right;">0.991</td>
+<td style="text-align: right;">0.332</td>
+<td style="text-align: right;">0.497</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1,793</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td><code>null_policy=neutral, mode=recall</code></td>
+<td style="text-align: right;">0.978</td>
+<td style="text-align: right;">0.780</td>
+<td style="text-align: right;">0.868</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">591</td>
+<td style="text-align: right;">27</td>
+</tr>
+</tbody>
+</table>
+<p>Blocking pruned 99.96% of the 12.5M candidate pairs in every configuration.
+Honest readings:</p>
+<ul>
+<li>exact dedup recovers <strong>5.4%</strong> of true duplicates on this data — that gap is
+  what fuzzy linkage exists to close;</li>
+<li><code>null_policy="neutral"</code> is the single biggest accuracy lever here (recall
+  0.30 → 0.46 at ~equal precision): blanked fields stop counting as
+  disagreement;</li>
+<li>on near-collision-heavy data, <code>mode=precision</code> did <strong>not</strong> beat balanced
+  precision — the surviving false positives are near-identical distinct
+  people who score above any reasonable threshold. Review queues, not
+  thresholds, are the tool for that failure mode;</li>
+<li>recall is bounded by blocking: pairs no blocking rule reaches are never
+  scored. Add rules to raise the ceiling, at candidate-pair cost;</li>
+<li>no head-to-head vs OpenRefine/recordlinkage/Splink is published here — see
+  <a href="../comparison/">comparison</a> for what is and isn't claimed.</li>
+</ul>
+<h2 id="competitor-differentiation">Competitor differentiation<a class="headerlink" href="#competitor-differentiation" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://github.com/FreshCode-Org/freshdata/blob/main/benchmarks/competitor_analysis.md"><code>benchmarks/competitor_analysis.md</code></a>:
+a curated, factual table covering pandas, pyjanitor, Great Expectations, Soda,
+dbt, AWS Glue Data Quality, Google Dataplex, OpenRefine, Dedupe,
+ydata-profiling, sweetviz and cleanlab. Capability claims come from each tool's
+public docs; FreshData advantages appear only where a harness metric confirms
+them.</p>
+<h2 id="adding-a-fixture-or-baseline">Adding a fixture or baseline<a class="headerlink" href="#adding-a-fixture-or-baseline" title="Permanent link">&para;</a></h2>
+<p>See <a href="../fixtures/"><code>docs/fixtures.md</code></a> for fixture schemas and the
+<code>DEFECT_MANIFEST</code> structure, and <code>benchmarks/README.md</code> for the baseline
+contract (<code>run(df)</code> + <code>AUTHORED_LINES</code>, lazy imports, graceful skip).</p>
+<h2 id="reproduce-the-legacy-corpus">Reproduce the legacy corpus<a class="headerlink" href="#reproduce-the-legacy-corpus" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>benchmarks/bench_quick.py<span class="w"> </span>--fixtures<span class="w"> </span>--compare<span class="w">   </span><span class="c1"># tests/fixtures corpus, side by side</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>python<span class="w"> </span>benchmarks/bench_quick.py<span class="w"> </span>--online<span class="w"> </span>--compare<span class="w">     </span><span class="c1"># cached online datasets</span>
+</span></code></pre></div>
 <p>Every fixture in <code>tests/fixtures/</code> is run under <code>conservative</code>, <code>balanced</code>, and
-<code>aggressive</code> strategies in CI, plus 50 curated real public datasets (10 Tier-1
-anchors with golden snapshots, 40 Tier-2 smoke tests). Reproduce the
-quality/efficiency matrix on your own data with:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">freshdata</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fd</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">fd</span><span class="o">.</span><span class="n">compare_clean</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<code>aggressive</code> strategies in CI, plus 50 curated real public datasets. Reproduce
+the quality/efficiency matrix on your own data with:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">freshdata</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fd</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">fd</span><span class="o">.</span><span class="n">compare_clean</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
 </span></code></pre></div>
+<!-- cleanbench:begin (generated by benchmarks.cleanbench, do not edit) -->
+
+<h1 id="cleanbench-full-suite-results">CleanBench full-suite results<a class="headerlink" href="#cleanbench-full-suite-results" title="Permanent link">&para;</a></h1>
+<p>Generated: 2026-07-05T07:07:36+00:00
+Tracks: T1, T2, T3, T4, T5 | trained calib-v1 used: no
+Command: <code>python -m benchmarks.cleanbench --tracks T1,T2,T3,T4,T5 --report site --reproduce-headline</code></p>
+<h2 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>freshdata_version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>git_commit</td>
+<td>635abe5f280707ad9aede97460c493aa6523e365</td>
+</tr>
+<tr>
+<td>python_version</td>
+<td>3.13.9</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>macOS-15.5-arm64-arm-64bit-Mach-O</td>
+</tr>
+<tr>
+<td>processor</td>
+<td>arm</td>
+</tr>
+<tr>
+<td>polars_version</td>
+<td>1.40.0</td>
+</tr>
+<tr>
+<td>duckdb_version</td>
+<td>1.5.4</td>
+</tr>
+<tr>
+<td>pandas_version</td>
+<td>2.3.3</td>
+</tr>
+<tr>
+<td>metrics_version</td>
+<td>cleanbench-metrics-v1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t1">T1<a class="headerlink" href="#t1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cell_repair_precision</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>cell_repair_recall</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>cell_repair_f1</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>false_modification_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>protected_column_violation_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>explainability_rubric_score</td>
+<td>1.0000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t2">T2<a class="headerlink" href="#t2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cell_repair_precision</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>cell_repair_recall</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>cell_repair_f1</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>false_modification_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>protected_column_violation_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>confidence_ece</td>
+<td>0.0384</td>
+</tr>
+<tr>
+<td>precision_at_conf_95</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>coverage_at_precision_99</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>n_confidence_pairs</td>
+<td>61</td>
+</tr>
+<tr>
+<td>explainability_rubric_score</td>
+<td>1.0000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t3">T3<a class="headerlink" href="#t3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>false_modification_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>protected_column_violation_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>context_exact_policy_accuracy</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>slot_f1</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>explainability_rubric_score</td>
+<td>1.0000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t4">T4<a class="headerlink" href="#t4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>profile_replay_lift</td>
+<td>0.7778</td>
+</tr>
+<tr>
+<td>false_modification_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>false_modification_rate_without_profile</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>profile_fmr_non_increase</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>drift_block_rate</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>privacy_leak_count</td>
+<td>0</td>
+</tr>
+<tr>
+<td>protected_column_violation_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>explainability_rubric_score</td>
+<td>1.0000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t5">T5<a class="headerlink" href="#t5" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rows</td>
+<td>50000</td>
+</tr>
+<tr>
+<td>speed_rows_per_sec</td>
+<td>133115.1000</td>
+</tr>
+<tr>
+<td>seconds_default</td>
+<td>0.3756</td>
+</tr>
+<tr>
+<td>seconds_with_semantic</td>
+<td>0.5657</td>
+</tr>
+<tr>
+<td>semantic_overhead_ratio</td>
+<td>0.5060</td>
+</tr>
+<tr>
+<td>peak_rss_bytes</td>
+<td>207749120</td>
+</tr>
+<tr>
+<td>peak_rss_delta_bytes</td>
+<td>27836416</td>
+</tr>
+<tr>
+<td>peak_rss_delta_semantic_bytes</td>
+<td>638976</td>
+</tr>
+<tr>
+<td>protected_column_violation_rate</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td>false_modification_rate</td>
+<td>—</td>
+</tr>
+<tr>
+<td>runtime_slowdown_vs_baseline</td>
+<td>-0.0314</td>
+</tr>
+<tr>
+<td>memory_overhead_vs_baseline</td>
+<td>0.0149</td>
+</tr>
+</tbody>
+</table>
+<h2 id="baselines">Baselines<a class="headerlink" href="#baselines" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>baseline</th>
+<th>status</th>
+<th>detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pandas</td>
+<td>ran</td>
+<td>cell_repair_precision=1.0000, cell_repair_recall=1.0000, cell_repair_f1=1.0000, false_modification_rate=0.0000, authored_lines=26, network_call_count=0</td>
+</tr>
+<tr>
+<td>pyjanitor</td>
+<td>skipped</td>
+<td>pyjanitor is not installed; install with <code>pip install pyjanitor</code> to run this baseline (the harness skips it otherwise).</td>
+</tr>
+<tr>
+<td>great_expectations</td>
+<td>ran</td>
+<td>engine=great_expectations, cells_validated=72, cells_failing=49, cells_repaired=0, manual_fix_cost_cells=49, cell_repair_f1=—, protected_column_violation_rate=—, false_modification_rate=—, network_call_count=0, notes=GE flags dirt but repairs nothing; every failing cell is manual work. Validation success is not repair success.</td>
+</tr>
+<tr>
+<td>llm_agent</td>
+<td>skipped</td>
+<td>set FRESHDATA_LLM_BASELINE=1 plus provider env vars to run (never enabled in CI; benchmark-only, isolated from runtime)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="release-gates">Release gates<a class="headerlink" href="#release-gates" title="Permanent link">&para;</a></h2>
+<p><strong>GATE FAILURES:</strong>
+- ECE 0.0384 &gt; 0.03</p>
+<!-- cleanbench:end -->
 
 
 
@@ -1088,7 +3719,7 @@ quality/efficiency matrix on your own data with:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples">
+          <a href="../production-readiness/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Production-readiness checklist">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1098,20 +3729,20 @@ quality/efficiency matrix on your own data with:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Examples
+                Production-readiness checklist
               </div>
             </div>
           </a>
         
         
           
-          <a href="../api-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: API Reference">
+          <a href="../performance-investigation/" class="md-footer__link md-footer__link--next" aria-label="Next: Performance investigation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                API Reference
+                Performance investigation
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1177,7 +3808,7 @@ quality/efficiency matrix on your own data with:</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
